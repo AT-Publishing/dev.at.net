@@ -1,0 +1,76 @@
+---
+layout: default-coin
+---
+<div class="container">
+  <div class="row">
+
+   <div class="eight columns">
+       <h4 class="post">
+          <strong>
+            About {{ page.title | upcase }}
+          </strong>
+        </h4>
+        <article class="maincontent">
+
+
+
+          {% if page.image[0] %}
+
+          {{ site.ads.aads }}
+
+          <figure class="thumb textflow">
+            <amp-img itemprop="image" src="{{ page.image[0] }}" alt="{{ page.title }} Altcoin Trading"
+            layout="responsive"
+            data-original-width="720px" data-original-height="360px"
+            width="150px" height="80px">
+            </amp-img>
+          </figure>
+
+          {% endif %}
+
+          {{ content }}
+
+          <span id="note">"Filtering posts by altcoin: {{ page.title }}"</span>
+
+          {% for post in site.posts %}
+            {% if post.category contains page.title or post.categories contains page.title %}
+            <h4 class="post">
+            <strong>
+            <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a>
+            </strong>
+            <small>{{ post.date | date_to_string }}</small>
+            </h4>
+
+            <div class="row">
+
+              <div class="nine columns">
+                {% if post.update %}<em> Last update {{ post.update | date: "%d %b %Y" }}: </em>{% endif %} {{ post.description }}
+              </div>
+
+              {% if post.image[0] %}
+              <div class="three columns">
+                <a target="_blank" href="{{ post.url }}">
+                  <figure class="thumb">
+                    <amp-img itemprop="image" src="{{ post.image[0] }}" alt="Altcoin Trading Blog" layout=""
+                    width="150px" height="80px">
+                    </amp-img>
+                  </figure>
+                </a>
+              </div>
+              {% endif %}
+
+            </div>
+
+            {% endif %}
+          {% endfor %}
+
+          <hr>
+
+
+
+        </article>
+    </div>
+    <div class="four columns notopmargin">
+      {% include sidebar.html %}
+    </div>
+  </div>

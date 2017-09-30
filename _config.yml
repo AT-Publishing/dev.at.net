@@ -1,0 +1,144 @@
+title: "Altcoin Trading"
+subtitle: "The forex of cryptocurrencies, bitcoin as the base."
+description: "Altcoin Trading is the forex of cryptocurrencies, with bitcoin as the base currency."
+baseurl: ""
+url: "https://www.altcointrading.net"
+
+collections:
+  - press
+  - security
+
+collections:
+  press:
+    output: true
+    permalink: /:collection/:name
+  security:
+    output: true
+    permalink: /:collection/:slug
+
+
+defaults:
+ -
+    scope:
+      path: "" # all
+      type: "posts"
+    values:
+      layout: "blog"
+      german: false
+      published: true
+      comments: true
+      stories: false
+      genres: "Opinion" # Blog, OpEd, Opinion, PressRelease, Satire, and UserGenerated
+      tickers: false
+      author: "https://reddit.com/u/KarlVonBahnhof"
+      author_name: "KarlVonBahnhof"
+ -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      german: false
+      published: true
+      comments: false
+      stories: false
+      author: "https://reddit.com/u/KarlVonBahnhof"
+      author_name: "KarlVonBahnhof"
+ -
+   scope:
+     path: "" # all
+     type: "press"
+   values:
+     layout: "forestry"
+     german: false
+     published: true
+     comments: false
+     stories: true
+     genres: "PressRelease" # Blog, OpEd, Opinion, PressRelease, Satire, and UserGenerated
+     tickers: false
+     author: "mailto:info@altcointrading.net"
+     author_name: "AltcoinTrading"
+ -
+   scope:
+     path: "security" # all
+     type: "security"
+   values:
+     layout: "forestry"
+     german: false
+     published: true
+     comments: false
+     stories: false
+     tickers: false
+     author: "mailto:info@altcointrading.net"
+     author_name: "AltcoinTrading"
+
+author: "AltcoinTrading"
+markdown: kramdown
+
+ads:
+  ledger: '<div class="text-center">
+  <a rel="nofollow" target="_blank" href="https://www.ledgerwallet.com/r/e274">
+  <amp-img itemprop="image" alt="Ledger Wallet protects your bitcoins"
+  src="https://www.ledgerwallet.com/images/promo/ledger-468x90-01.jpg"
+  layout="responsive"
+  data-original-width="468px" data-original-height="90px"
+  width="468px" height="90px"></amp-img>
+  </a></div>'
+  ledger-thin: '<div class="text-center">
+  <a rel="nofollow" target="_blank" href="https://www.ledgerwallet.com/r/e274">
+  <amp-img itemprop="image" alt="Ledger Wallet protects your bitcoins"
+  src="/img/wallets/ledger-hero.png"
+  layout="responsive"
+  data-original-width="710px" data-original-height="60px"
+  width="710px" height="60px"></amp-img>
+  </a></div><br>'
+  trezor: '<div class="clearfix">
+  <a rel="nofollow" target="_blank" href="https://shop.trezor.io?a=fany@tutanota.com">
+  <amp-img itemprop="image"
+  src="/img/wallets/trezor.jpg"
+  alt="Trezor Altcoins - Trezor is Hardware wallet for bitcoin and altcoins" data-original-width="728px"
+  data-original-height="90px" layout="responsive" width="728px" height="90px">
+  </amp-img></a></div>'
+  trezorbox: '<div class="text-center">
+  <a rel="nofollow" target="_blank" href="https://shop.trezor.io?a=fany@tutanota.com">
+  <amp-img itemprop="image"
+  src="/img/wallets/trezor-altcoins.jpg"
+  alt="Trezor Altcoins - Trezor is Hardware wallet for bitcoin and altcoins" data-original-width="350px"
+  data-original-height="320px" layout="responsive" width="350px" height="320px">
+  </amp-img></a></div>'
+  trezorlong: '<div class="text-center">
+  <a rel="nofollow" target="_blank" href="https://shop.trezor.io?a=fany@tutanota.com">
+  <amp-img itemprop="image"
+  src="/img/wallets/trezor-altcoins-long.jpg"
+  alt="Trezor Wallet for bitcoins and altcoins" data-original-width="728px"
+  data-original-height="90px" layout="responsive" width="728px" height="90px">
+  </amp-img></a></div>'
+  pm1: '<div class="text-center"><a rel="nofollow" target="_blank" href="https://perfectmoney.is/?ref=7622697">
+  <amp-img itemprop="image" alt="Perfect Money" src="/img/ads/pm1.jpg"
+  data-original-width="468px" data-original-height="20px" layout="responsive" width="468px" height="20px">
+  </amp-img></a></div>'
+  pm2: '<div class="clearfix"><a rel="nofollow" target="_blank" href="https://perfectmoney.is/?ref=7622697">
+  <amp-img itemprop="image" alt="Perfect Money" src="/img/ads/pm2.jpg"
+  data-original-width="468px" data-original-height="20px" layout="responsive" width="468px" height="20px"></amp-img>
+  </a></div>'
+  acash: '<div class="containter-center"><a href="http://wallet.advcash.com/referral/3d50b494-473e-45e5-8434-5ad9d8658cc8" rel="nofollow" target="_blank"><amp-img itemprop="image" src="/img/vcc/acash.png" alt="AdvCash Bitcoin Virtual Credit Card" data-original-width="336px" data-original-height="300px" layout="responsive" width="336px" height="300px"></amp-img></a></div>'
+  acashgreen: '<div class="containter-center"><a href="http://wallet.advcash.com/referral/3d50b494-473e-45e5-8434-5ad9d8658cc8" rel="nofollow" target="_blank"><amp-img itemprop="image" src="/img/vcc/acash_green.jpeg" alt="AdvCash Bitcoin Virtual Credit Card" data-original-width="336px" data-original-height="300px" layout="responsive" width="336px" height="300px"></amp-img></a></div>'
+  feeds: '<a class="button" target="_blank" href="http://feeds.specificfeeds.com/altcointrading">YES, ALERT ME ON NEWS</a>'
+  aads728: '<div class="clearfix clearfix adfix"><amp-iframe width="728px" height="90px"
+    layout="responsive" data-aa="147076" sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+    src="https://ad.a-ads.com/147076?size=728x90"><amp-img layout="fill" src="/img/ads/ad-placeholder.jpg"
+     placeholder></amp-img></amp-iframe></div><div class="clearfix"></div>'
+  sidebar: '<div class="clearfix clearfix adfix"><amp-iframe width="336px" height="280px"
+    layout="responsive" data-aa="147074" sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+    src="https://ad.a-ads.com/147074?size=336x280"><amp-img layout="fill" src="/img/ads/ad-placeholder.jpg"
+     placeholder></amp-img></amp-iframe></div><div class="clearfix"></div>'
+
+mailchimp: '<div class="mailchimpfix">
+<amp-iframe width="400px" height="300px" layout="fixed" sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+src="https://amp2disqus.netlify.com/altcointrading/signup.html"><amp-img layout="fill" src="/img/ads/ad-placeholder.jpg" placeholder></amp-img></amp-iframe>
+</div>'
+
+
+fucksense:
+  aads728: '<div class="clearfix clearfix adfix"><amp-ad layout="responsive" width="728px" height="90px"
+    type="adsense" data-ad-client="ca-pub-6979812205705127" data-ad-slot="4445157690"></amp-ad></div><div class="clearfix"></div>'
+  sidebar: '<amp-ad layout="responsive" width="300px" height="250px" type="adsense" data-ad-client="ca-pub-6979812205705127" data-ad-slot="1212489691"></amp-ad>'

@@ -1,0 +1,96 @@
+---
+layout: default
+navi:
+ exclude: yes
+---
+<div class="container">
+  <div class="row">
+   <div class="eight columns swapper">
+
+    <section id="popular-posts">
+
+      {{ site.ads.aads728 }}
+
+
+      <span id="note">Popular Posts</span>
+      {% for post in site.posts %}
+         {% if post.tags contains 'popular' %}
+          <h3>
+            <a href=".{{ post.url }}">{{ post.title }}</a>
+          </h3>
+          <p>
+          {% if post.update %}<em> Updated {{ post.update | date: "%d %b %Y" }}: </em>{% endif %}{{ post.description }}
+          </p>
+        {% endif %}
+      {% endfor %}
+
+
+    </section>
+
+    <section id="new-posts">
+
+      {{ site.ads.aads728 }}
+
+
+      <span id="note">New Posts</span>
+
+      {% for post in site.press offset: 0 limit: 2 %}
+        <h4 class="post">
+          <strong>
+            <a href=".{{ post.url }}"><span class="tag">PRESS RELEASE</span>&nbsp;{{ post.title }}</a>
+          </strong>
+          <small>{{ post.date | date_to_string }}</small>
+        </h4>
+        <p>
+        {{ post.description }}
+        </p>
+      {% endfor %}
+
+
+    <br>
+
+
+    {% unless post.tags contains 'press' %}
+      {% for post in site.posts offset: 0 limit: 15 %}
+        <h4 class="post">
+          <strong>
+            <a href=".{{ post.url }}">{% if post.stories %}<span class="tag">{{ post.genres }}</span>&nbsp;{% endif %}{{ post.title }}</a>
+          </strong>
+          <small>{{ post.date | date_to_string }}</small>
+        </h4>
+        <div class="row">
+          <div class="nine columns">
+            {% if post.update %}<em> Last update {{ post.update | date: "%d %b %Y" }}: </em>{% endif %}{{ post.description }}
+          </div>
+          {% if post.image[0] %}
+          <div class="three columns">
+            <a target="_blank" href="{{ post.url }}">
+              <figure class="thumb">
+                <amp-img itemprop="image" src="{{ post.image[0] }}" alt="Altcoin Trading Blog"
+                layout="responsive"
+                data-original-width="720px" data-original-height="360px"
+                width="150px" height="80px">
+                </amp-img>
+              </figure>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+     {% endunless %}
+    </section>
+
+
+
+
+
+
+    </div>
+
+
+    <div class="four columns notopmargin">
+      {% include sidebar.html %}
+    </div>
+
+
+  </div>
